@@ -3,9 +3,18 @@
     <head>
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
         <script type="text/javascript" src="/js/tfff1s-multilingual.js"></script>
+        
+        <script type="text/javascript">
+            $(window).ready(function() {
+                var attribute = $('html').attr('lang');
+                var DebugMode = false; //Prevents the spam of browser console, DEFAULT = false
+                changeLanguage(attribute, "language", DebugMode);
+            });   
+        </script>
+        
     </head>
     
-    <body onload="changeLanguage('en-us')">
+    <body>
         <a href="#"><lang langID="1"></lang></a>
         <br>
         <span><lang langID="2"></lang></span>
