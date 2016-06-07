@@ -4,20 +4,23 @@
         <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
         <script type="text/javascript" src="/js/tfff1s-multilingual.js"></script>
         
+        <link rel="stylesheet" type="text/css" href="/css/tfff1s_multilingual.css">
         <script type="text/javascript">
             $(window).ready(function() {
-                var attribute = $('html').attr('lang');
-                var DebugMode = false; //Prevents the spam of browser console, DEFAULT = false
-                changeLanguage(attribute, "language", DebugMode);
+                var attribute = $('html').attr('lang'); //Document Set Language, set in html element: <html lang="en-us">
+                var DebugMode = true; //Prevents the spam of browser console, DEFAULT = false
+                loadLanguage(attribute, "language", DebugMode);
             });   
         </script>
-        
     </head>
     
     <body>
         <a href="#"><lang langID="1"></lang></a>
         <br>
-        <span><lang langID="2"></lang></span>
-        <span><lang langID="3"></lang></span>
+        <span><lang langID="2" es-es="hola2"></lang></span>
+        <span><lang langID="3" es-es="G'day!"></lang></span>
+        <br>
+        <div><lang en-us="USA!" fr-fr="France! <a style='background:orange;color:black;' href='http://www.example.com'>HTML IN LANG!!!!</a>"></lang></div>
+        <lang langID="4"><!-- This will only show up on french (fr-fr) --></lang>
     </body>
 </html>
